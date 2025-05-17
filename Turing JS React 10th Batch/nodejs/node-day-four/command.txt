@@ -1,0 +1,40 @@
+show databases;
+
+show collections;
+
+use <collection_name>
+
+db.todos.insertOne({
+    title: "Task 1",
+    completed: false,
+})
+
+db.todos.insertMany([
+{
+    title: "Task 3",
+    completed: false,
+},
+{
+    title: "Task 4',
+    completed: false,
+}
+])
+
+db.movies.insertOne({
+    title:"Titanic",
+    year: 2000,
+    actors:[
+        {
+            name: "Leonardo Decaprio",
+            gender: "Male",
+        },
+        {
+            name: "Kate Winslect",
+            gender: "Female",
+        } 
+    ]
+})
+
+db.todos.find({completed: true})
+
+db.movies.find({"actors.gender": "Male"})
